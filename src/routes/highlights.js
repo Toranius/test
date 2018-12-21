@@ -7,7 +7,7 @@ const router = express.Router();
 router.get("/", (req, res, next) => {
   const cache = req.query.cache === "true";
 
-  return highlightService
+  highlightService
     .getMergedHighlights(cache)
     .then(highlights => {
       res.json({ highlights });
