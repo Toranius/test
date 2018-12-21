@@ -10,7 +10,7 @@ const app = express();
 bodyParser.urlencoded({ extended: true });
 app.use(bodyParser.json());
 
-app.use("/", routes);
+app.use("/api", routes);
 
 app.use((err, req, res, next) => {
   res.status(500);
